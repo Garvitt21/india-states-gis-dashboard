@@ -1,0 +1,9 @@
+/* Feel free to extend.  Only small tweaks beyond Tailwind defaults. */
+html,
+body,
+#map {
+  height: 100%;
+}
+.leaflet-container {
+  font-family: system-ui, sans-serif;
+}

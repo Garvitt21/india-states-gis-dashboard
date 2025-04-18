@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>India States Map</title>
+      
+        <!-- Leaflet (no integrity) -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+      
+        <!-- Tailwind (safe for assignment) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+      
+        <link rel="stylesheet" href="styles.css" />
+    </head>      
+
+  <body class="h-screen w-screen flex flex-col lg:flex-row">
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="w-full lg:w-80 shrink-0 bg-gray-50 border-b lg:border-b-0 lg:border-r border-gray-200 p-4 overflow-y-auto"
+    >
+      <h1 class="text-xl font-semibold mb-4">Indian States Dashboard</h1>
+
+      <!-- Search -->
+      <form id="searchForm" class="mb-4 flex gap-2">
+        <input
+          id="stateInput"
+          type="text"
+          placeholder="Search state…"
+          class="flex-1 border rounded p-2"
+          required
+        />
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Go
+        </button>
+      </form>
+
+      <!-- Stats -->
+      <div id="stats" class="space-y-2 text-sm"></div>
+    </aside>
+
+    <!-- Map -->
+    <div id="map" class="flex-1"></div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
